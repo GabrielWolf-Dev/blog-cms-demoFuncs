@@ -1,6 +1,7 @@
-import * as prismic from '@prismicio/client';
-import { getPrismicClient } from "../services/prismic";
 import Link from 'next/link';
+import * as prismic from '@prismicio/client';
+
+import { getPrismicClient } from "../services/prismic";
 
 export default function Home(props) {
   return (

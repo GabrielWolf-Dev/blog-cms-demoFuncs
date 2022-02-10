@@ -1,8 +1,15 @@
-import * as prismic from '@prismicio/client';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import * as prismic from '@prismicio/client';
+
 import { getPrismicClient } from "../../services/prismic";
 
 export default function Posts(props){
+  const router = useRouter();
+  if (router.isFallback) {
+    return <h3>Carregando...</h3>
+  }
+
     return(
         <div>
             <h1>Posts vindos no CMS Prismic!</h1>
